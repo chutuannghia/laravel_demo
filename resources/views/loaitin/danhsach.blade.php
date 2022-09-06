@@ -31,9 +31,9 @@
                 @foreach($ds as $lt)
                     <tr>
                         <td>{{$lt->id}}</td>
-                        <td>{{$lt->Theloai->Ten}}</td>
-                        <td>{{$lt->Ten}}</td>
-                        <td>{{$lt->TenKhongDau}}</td>
+                        <td>{!!$lt->Theloai->Ten!!}</td>
+                        <td>{!!$lt->Ten!!}</td>
+                        <td>{!!$lt->TenKhongDau!!}</td>
                         <td align="center"><a href="{{route('sualt', $lt->id)}}" class="btn btn-success">Sửa</a></td>
                         <td align="center"><a href="{{route('xoalt', $lt->id)}}" class="btn btn-danger">Xoá</a></td>
                     </tr>

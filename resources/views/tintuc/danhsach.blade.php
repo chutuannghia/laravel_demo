@@ -18,17 +18,17 @@
         </div>
         @foreach($ds as $tt)
         <div class="card-body">
-            <h2 class="alert alert-warning">{{$tt->TieuDe}}</h2>
+            <h2 class="alert alert-warning">{!!$tt->TieuDe!!}</h2>
             <div class="row">
                 <div class="col-md-3"><img src="resources/img/tintuc/{{$tt->Hinh}}" class="img-fluid" width="100%" alt="{{$tt->TieuDeKhongDau}}"></div>
-                <div class="col-md-9"><h5>Tóm tắt</h5><p>{{$tt->TomTat}}</p></div>
+                <div class="col-md-9"><h5>Tóm tắt</h5><p>{!!$tt->TomTat!!}</p></div>
             </div>
             <h5>Thể loại: <span class="text-primary">{{$tt->Ten}}</span></h5>
             <h5>Nội dung</h5>
-            <p>{{$tt->NoiDung}}</p>
+            <p>{!!$tt->NoiDung!!}</p>
             <p>
                 Nổi bật: <span class="text-primary h5">{{$tt->NoiBat}}</span> <br>
-                Số lượt xem:<span class="text-primary h5">{{$tt->SoLuotXem}}</span> <br>
+                Số lượt xem:<span class="text-primary h5">{!!$tt->SoLuotXem!!}</span> <br>
 
             </p>
             <div class="text-center mb-3">

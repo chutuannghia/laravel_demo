@@ -31,9 +31,9 @@
                 @foreach($ds as $cm)
                     <tr>
                         <td>{{$cm->id}}</td>
-                        <td>{{$cm->Users->name}}</td>
-                        <td>{{$cm->Tintuc->TieuDe}}</td>
-                        <td>{{$cm->NoiDung}}</td>
+                        <td>{!!$cm->Users->name!!}</td>
+                        <td>{!!$cm->Tintuc->TieuDe!!}</td>
+                        <td>{!!$cm->NoiDung!!}</td>
                         <td align="center"><a href="{{route('suabl', $cm->id)}}" class="btn btn-success">Sửa</a></td>
                         <td align="center"><a href="{{route('xoabl', $cm->id)}}" class="btn btn-danger">Xoá</a></td>
                     </tr>

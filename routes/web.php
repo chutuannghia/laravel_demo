@@ -9,6 +9,7 @@ use App\Http\Controllers\loaitinController;
 use App\Http\Controllers\binhluanController;
 use App\Http\Controllers\slideController;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\frontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,6 +93,15 @@ Route::group(['prefix'=>'auth'],function(){
 
 });
 
+//frontend
+Route::group(['prefix'=>'frontend'],function(){
+    Route::get('',[frontendController::class,'trangchu'])->name('fetrangchu');
+    Route::get('gioithieu',[frontendController::class,'gioithieu'])->name('fegioithieu');
+    Route::get('chitiet',[frontendController::class,'chitiet'])->name('fechitiet');
+    Route::get('lienhe',[frontendController::class,'lienhe'])->name('felienhe');
+    Route::get('loaitin/{id}/{TenKhongDau}.html',[frontendController::class,'loaitin'])->name('feloaitin');
+    Route::get('tintuc/{id}/{TieuDeKhongDau}.html',[frontendController::class,'tintuc'])->name('fetintuc');
+});
 //login social
 //github
 Route::get('/auth/github/redirect' ,[AuthController::class, 'githubredirect'])->name('githublogin');

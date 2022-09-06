@@ -30,8 +30,8 @@
                 @foreach($ds as $tl)
                     <tr>
                         <td>{{$tl->id}}</td>
-                        <td>{{$tl->Ten}}</td>
-                        <td>{{$tl->TenKhongDau}}</td>
+                        <td>{!!$tl->Ten!!}</td>
+                        <td>{!!$tl->TenKhongDau!!}</td>
                         <td align="center"><a href="{{route('suatl', $tl->id)}}" class="btn btn-success">Sửa</a></td>
                         <td align="center"><a href="{{route('xoatl', $tl->id)}}" class="btn btn-danger">Xoá</a></td>
                     </tr>

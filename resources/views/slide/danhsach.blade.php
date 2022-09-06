@@ -33,10 +33,10 @@
                 @foreach($ds as $sl)
                     <tr>
                         <td>{{$sl->id}}</td>
-                        <td>{{$sl->Ten}}</td>
+                        <td>{!!$sl->Ten!!}</td>
                         <td><img src="resources/img/slide/{{$sl->Hinh}}" width="100" height="100" alt="hinh"></td>
-                        <td>{{$sl->NoiDung}}</td>
-                        <td>{{$sl->link}}</td>
+                        <td>{!!$sl->NoiDung!!}</td>
+                        <td>{!!$sl->link!!}</td>
                         <td align="center"><a href="{{route('suasl', $sl->id)}}" class="btn btn-success">Sửa</a></td>
                         <td align="center"><a href="{{route('xoasl', $sl->id)}}" class="btn btn-danger">Xoá</a></td>
                     </tr>
